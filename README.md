@@ -1,72 +1,60 @@
-# pylitemongo
+pylitemongo
 
-[English](#english) | [فارسی](#فارسی)
+English | فارسی
 
----
+English
 
-## English
+📌 Overview
 
-### 📌 Overview
-**pylitemongo** is a lightweight, MongoDB-like document store built on top of SQLite.  
-It provides a simple API for storing, querying, and managing JSON-like documents without the need for a separate database server.  
-Perfect for small projects, prototyping, or embedding into applications where MongoDB would be too heavy.
+pylitemongo is a lightweight, MongoDB-like document store built on top of SQLite. It offers a familiar API for managing JSON-like documents without requiring a separate database server. Ideal for small-scale applications, rapid prototyping, or embedded use cases.
 
----
+✨ Features
 
-### ✨ Features
-- MongoDB-like API with familiar operations (`insert`, `find`, `update`, `delete`)
-- Uses **SQLite** as the backend (no external dependencies)
-- Lightweight and fast
-- Pure Python implementation
-- Easy to integrate into existing projects
+MongoDB-style operations (insert, find, update, delete)
 
----
+Powered by SQLite (no external dependencies)
 
-### 📦 Installation
-```bash
+Fast and minimal footprint
+
+Written entirely in Python
+
+Seamless integration with existing Python projects
+
+📦 Installation
+
 pip install pylitemongo
-```
+
 🚀 Quick Start
-```python
+
 from pylitemongo import Database
 
-# Create or connect to a database
 db = Database("mydata.db")
-
-# Create a collection
 users = db["users"]
 
-# Insert documents
 users.insert({"name": "Alice", "age": 25})
 users.insert({"name": "Bob", "age": 30})
 
-# Query documents
 for user in users.find({"age": 25}):
     print(user)
 
-# Update documents
 users.update({"name": "Alice"}, {"$set": {"age": 26}})
-
-# Delete documents
 users.delete({"name": "Bob"})
 
 📚 Documentation
 
-Database: Represents a SQLite-backed database.
+Database: SQLite-backed document store
 
-Collection: Provides MongoDB-like methods (insert, find, update, delete).
+Collection: MongoDB-like methods (insert, find, update, delete)
 
-Queries support simple operators like $eq, $gt, $lt, $set.
+Supports basic query operators: $eq, $gt, $lt, $set
 
 🛠 Requirements
 
 Python 3.6+
 
-SQLite (built-in with Python)
+SQLite (included with Python)
 
 🧪 Testing
-
-Clone the repository and run tests with pytest:
 
 git clone https://github.com/yourusername/pylitemongo.git
 cd pylitemongo
@@ -75,39 +63,39 @@ pytest
 
 🤝 Contributing
 
-Contributions are welcome!
+We welcome contributions!
 
-Fork the repository
+Fork the repo
 
-Create a new branch (git checkout -b feature-name)
+Create a branch (git checkout -b feature-name)
 
 Commit your changes (git commit -m "Add feature")
 
-Push to the branch (git push origin feature-name)
+Push the branch (git push origin feature-name)
 
 Open a Pull Request
 
 📜 License
 
-This project is licensed under the MIT License.
+MIT License
 
 فارسی
 
 📌 معرفی
 
-pylitemongo یک کتابخانه سبک و ساده است که امکان ذخیره و مدیریت داده‌ها را به صورت سندمحور (Document-Oriented) شبیه MongoDB فراهم می‌کند، اما بر پایه SQLite ساخته شده است.این ابزار برای پروژه‌های کوچک، نمونه‌سازی سریع (Prototyping) یا زمانی که استفاده از MongoDB سنگین است، بسیار مناسب می‌باشد.
+pylitemongo یک کتابخانه سبک برای ذخیره‌سازی داده‌ها به صورت سندمحور است که بر پایه SQLite ساخته شده. این ابزار برای پروژه‌های کوچک، نمونه‌سازی سریع یا استفاده در برنامه‌هایی که نیاز به پایگاه‌داده سنگین ندارند، مناسب است.
 
 ✨ ویژگی‌ها
 
-رابط کاربری شبیه MongoDB با متدهای آشنا (insert، find، update، delete)
+عملیات مشابه MongoDB (insert، find، update، delete)
 
-استفاده از SQLite به عنوان پایگاه داده داخلی (بدون نیاز به نصب جداگانه)
+استفاده از SQLite به عنوان پایگاه‌داده داخلی
 
-سبک و سریع
+سبک، سریع و بدون وابستگی خارجی
 
 پیاده‌سازی کامل با پایتون
 
-قابل استفاده در پروژه‌های موجود
+قابل استفاده در پروژه‌های پایتونی موجود
 
 📦 نصب
 
@@ -117,31 +105,23 @@ pip install pylitemongo
 
 from pylitemongo import Database
 
-# ایجاد یا اتصال به دیتابیس
 db = Database("mydata.db")
-
-# ایجاد کالکشن
 users = db["users"]
 
-# درج داده
 users.insert({"name": "Ali", "age": 25})
 users.insert({"name": "Sara", "age": 30})
 
-# جستجو
 for user in users.find({"age": 25}):
     print(user)
 
-# بروزرسانی
 users.update({"name": "Ali"}, {"$set": {"age": 26}})
-
-# حذف
 users.delete({"name": "Sara"})
 
 📚 مستندات
 
-Database: مدیریت دیتابیس SQLite
+Database: مدیریت پایگاه‌داده SQLite
 
-Collection: متدهای شبیه MongoDB (insert، find، update، delete)
+Collection: متدهای مشابه MongoDB (insert، find، update، delete)
 
 پشتیبانی از عملگرهای ساده مانند $eq، $gt، $lt، $set
 
@@ -149,11 +129,9 @@ Collection: متدهای شبیه MongoDB (insert، find، update، delete)
 
 پایتون 3.6 یا بالاتر
 
-SQLite (به صورت پیش‌فرض همراه پایتون نصب است)
+SQLite (به صورت پیش‌فرض همراه پایتون)
 
 🧪 تست
-
-برای اجرای تست‌ها:
 
 git clone https://github.com/yourusername/pylitemongo.git
 cd pylitemongo
@@ -162,7 +140,7 @@ pytest
 
 🤝 مشارکت
 
-مشارکت شما ارزشمند است!
+خوشحال می‌شویم اگر مشارکت کنید!
 
 ریپازیتوری را Fork کنید
 
@@ -177,4 +155,3 @@ Branch را Push کنید (git push origin feature-name)
 📜 مجوز
 
 این پروژه تحت مجوز MIT منتشر شده است.
-
