@@ -1,31 +1,38 @@
-pylitemongo
+# pylitemongo
 
 English | فارسی
 
-English
+---
 
-📌 Overview
+## English
 
-pylitemongo is a lightweight, MongoDB-like document store built on top of SQLite. It offers a familiar API for managing JSON-like documents without requiring a separate database server. Ideal for small-scale applications, rapid prototyping, or embedded use cases.
+### 📌 Overview
 
-✨ Features
+**pylitemongo** is a lightweight, MongoDB-like document store built on top of SQLite. It offers a familiar API for managing JSON-like documents without requiring a separate database server. Ideal for small-scale applications, rapid prototyping, or embedded use cases.
 
-MongoDB-style operations (insert, find, update, delete)
+---
 
-Powered by SQLite (no external dependencies)
+### ✨ Features
 
-Fast and minimal footprint
+* MongoDB-style operations (`insert`, `find`, `update`, `delete`)
+* Powered by **SQLite** (no external dependencies)
+* Fast and minimal footprint
+* Written entirely in Python
+* Seamless integration with existing Python projects
 
-Written entirely in Python
+---
 
-Seamless integration with existing Python projects
+### 📦 Installation
 
-📦 Installation
-
+```bash
 pip install pylitemongo
+```
 
-🚀 Quick Start
+---
 
+### 🚀 Quick Start
+
+```python
 from pylitemongo import Database
 
 db = Database("mydata.db")
@@ -39,70 +46,83 @@ for user in users.find({"age": 25}):
 
 users.update({"name": "Alice"}, {"$set": {"age": 26}})
 users.delete({"name": "Bob"})
+```
 
-📚 Documentation
+---
 
-Database: SQLite-backed document store
+### 📚 Documentation
 
-Collection: MongoDB-like methods (insert, find, update, delete)
+* **Database**: SQLite-backed document store
+* **Collection**: MongoDB-like methods (`insert`, `find`, `update`, `delete`)
+* Supports basic query operators: `$eq`, `$gt`, `$lt`, `$set`
 
-Supports basic query operators: $eq, $gt, $lt, $set
+---
 
-🛠 Requirements
+### 🛠 Requirements
 
-Python 3.6+
+* Python 3.6+
+* SQLite (included with Python)
 
-SQLite (included with Python)
+---
 
-🧪 Testing
+### 🧪 Testing
 
+```bash
 git clone https://github.com/yourusername/pylitemongo.git
 cd pylitemongo
 pip install -r requirements-dev.txt
 pytest
+```
 
-🤝 Contributing
+---
+
+### 🤝 Contributing
 
 We welcome contributions!
 
-Fork the repo
+* Fork the repo
+* Create a branch (`git checkout -b feature-name`)
+* Commit your changes (`git commit -m "Add feature"`)
+* Push the branch (`git push origin feature-name`)
+* Open a Pull Request
 
-Create a branch (git checkout -b feature-name)
+---
 
-Commit your changes (git commit -m "Add feature")
-
-Push the branch (git push origin feature-name)
-
-Open a Pull Request
-
-📜 License
+### 📜 License
 
 MIT License
 
-فارسی
+---
 
-📌 معرفی
+## فارسی
 
-pylitemongo یک کتابخانه سبک برای ذخیره‌سازی داده‌ها به صورت سندمحور است که بر پایه SQLite ساخته شده. این ابزار برای پروژه‌های کوچک، نمونه‌سازی سریع یا استفاده در برنامه‌هایی که نیاز به پایگاه‌داده سنگین ندارند، مناسب است.
+### 📌 معرفی
 
-✨ ویژگی‌ها
+**pylitemongo** یک کتابخانه سبک برای ذخیره‌سازی داده‌ها به صورت سندمحور است که بر پایه **SQLite** ساخته شده. این ابزار برای پروژه‌های کوچک، نمونه‌سازی سریع یا استفاده در برنامه‌هایی که نیاز به پایگاه‌داده سنگین ندارند، مناسب است.
 
-عملیات مشابه MongoDB (insert، find، update، delete)
+---
 
-استفاده از SQLite به عنوان پایگاه‌داده داخلی
+### ✨ ویژگی‌ها
 
-سبک، سریع و بدون وابستگی خارجی
+* عملیات مشابه MongoDB (`insert`، `find`، `update`، `delete`)
+* استفاده از **SQLite** به عنوان پایگاه‌داده داخلی
+* سبک، سریع و بدون وابستگی خارجی
+* پیاده‌سازی کامل با پایتون
+* قابل استفاده در پروژه‌های پایتونی موجود
 
-پیاده‌سازی کامل با پایتون
+---
 
-قابل استفاده در پروژه‌های پایتونی موجود
+### 📦 نصب
 
-📦 نصب
-
+```bash
 pip install pylitemongo
+```
 
-🚀 شروع سریع
+---
 
+### 🚀 شروع سریع
+
+```python
 from pylitemongo import Database
 
 db = Database("mydata.db")
@@ -116,42 +136,48 @@ for user in users.find({"age": 25}):
 
 users.update({"name": "Ali"}, {"$set": {"age": 26}})
 users.delete({"name": "Sara"})
+```
 
-📚 مستندات
+---
 
-Database: مدیریت پایگاه‌داده SQLite
+### 📚 مستندات
 
-Collection: متدهای مشابه MongoDB (insert، find، update، delete)
+* **Database**: مدیریت پایگاه‌داده SQLite
+* **Collection**: متدهای مشابه MongoDB (`insert`، `find`، `update`، `delete`)
+* پشتیبانی از عملگرهای ساده مانند `$eq`، `$gt`، `$lt`، `$set`
 
-پشتیبانی از عملگرهای ساده مانند $eq، $gt، $lt، $set
+---
 
-🛠 پیش‌نیازها
+### 🛠 پیش‌نیازها
 
-پایتون 3.6 یا بالاتر
+* پایتون 3.6 یا بالاتر
+* SQLite (به صورت پیش‌فرض همراه پایتون)
 
-SQLite (به صورت پیش‌فرض همراه پایتون)
+---
 
-🧪 تست
+### 🧪 تست
 
+```bash
 git clone https://github.com/yourusername/pylitemongo.git
 cd pylitemongo
 pip install -r requirements-dev.txt
 pytest
+```
 
-🤝 مشارکت
+---
+
+### 🤝 مشارکت
 
 خوشحال می‌شویم اگر مشارکت کنید!
 
-ریپازیتوری را Fork کنید
+* ریپازیتوری را Fork کنید
+* یک Branch جدید بسازید (`git checkout -b feature-name`)
+* تغییرات خود را Commit کنید (`git commit -m "افزودن ویژگی جدید"`)
+* Branch را Push کنید (`git push origin feature-name`)
+* یک Pull Request باز کنید
 
-یک Branch جدید بسازید (git checkout -b feature-name)
+---
 
-تغییرات خود را Commit کنید (git commit -m "افزودن ویژگی جدید")
-
-Branch را Push کنید (git push origin feature-name)
-
-یک Pull Request باز کنید
-
-📜 مجوز
+### 📜 مجوز
 
 این پروژه تحت مجوز MIT منتشر شده است.
